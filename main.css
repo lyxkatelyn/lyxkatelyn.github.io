@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: black;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 25px;
+  text-decoration: none;
+  height: 100%;
+}
+
+.content {
+  padding: 25px;
+  width: 80%;
+  margin: 4rem auto; 
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 77px;
+}
+
+.navButton {
+        border-style:none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		-webkit-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		-ms-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		background-color: transparent;
+		cursor: pointer;
+		display: inline-block;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		height: 2rem;
+		letter-spacing: 0.175em;
+		text-decoration: none;
+		text-transform: uppercase;
+}
+
+.navButton:hover {
+    opacity: .5;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+/*    letter-spacing: 0.12em;*/
+    text-align: center;
+}
+
+table {
+    table-layout: fixed ;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+td {
+    width: 50%;
+}
+
+figure {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.copyright {
+    margin: 10px;
+    text-decoration: none;
+}
+
+@-moz-keyframes gallery-modal-spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes gallery-modal-spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes gallery-modal-spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gallery-modal-spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.gallery .modal {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -moz-transition: opacity 0.5s ease, visibility 0.5s, z-index 0.5s;
+    -webkit-transition: opacity 0.5s ease, visibility 0.5s, z-index 0.5s;
+    -ms-transition: opacity 0.5s ease, visibility 0.5s, z-index 0.5s;
+    transition: opacity 0.5s ease, visibility 0.5s, z-index 0.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.875);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    outline: 0;
+    position: fixed;
+    top: 0;
+    visibility: none;
+    width: 100%;
+    z-index: 0;
+}
+
+.gallery .modal:before {
+    -moz-animation: gallery-modal-spinner 1s infinite linear;
+    -webkit-animation: gallery-modal-spinner 1s infinite linear;
+    -ms-animation: gallery-modal-spinner 1s infinite linear;
+    animation: gallery-modal-spinner 1s infinite linear;
+    -moz-transition: opacity 0.25s ease;
+    -webkit-transition: opacity 0.25s ease;
+    -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+    -moz-transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='96px' height='96px' viewBox='0 0 96 96' zoomAndPan='disable'%3E%3Cstyle%3Ecircle %7Bfill: transparent%3B stroke: %23253237%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cdefs%3E%3CclipPath id='corner'%3E%3Cpolygon points='0,0 48,0 48,48 96,48 96,96 0,96' /%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23corner)'%3E%3Ccircle cx='48' cy='48' r='32'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    content: '';
+    display: block;
+    height: 4rem;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+}
+
+.gallery .modal:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='64px' height='64px' viewBox='0 0 64 64' zoomAndPan='disable'%3E%3Cstyle%3Eline %7Bstroke: %23253237%3Bstroke-width: 2px%3B%7D%3C/style%3E%3Cline x1='20' y1='20' x2='44' y2='44' /%3E%3Cline x1='20' y1='44' x2='44' y2='20' /%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 4rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 4rem;
+}
+
+.gallery .modal .inner {
+    -moz-transform: translateY(0.75rem);
+    -webkit-transform: translateY(0.75rem);
+    -ms-transform: translateY(0.75rem);
+    transform: translateY(0.75rem);
+    -moz-transition: opacity 0.25s ease, -moz-transform 0.25s ease;
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+    -ms-transition: opacity 0.25s ease, -ms-transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    opacity: 0;
+}
+
+.gallery .modal .inner img {
+        box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.35);
+        display: block;
+        max-height: 90vh;
+        max-width: 90vw;
+    }
+
+.gallery .modal.visible {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 11000;
+}
+
+.gallery .modal.visible:before {
+        opacity: 1;
+    }
+
+.gallery .modal.loaded .inner {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
+    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+}
+
+.gallery .modal.loaded:before {
+    -moz-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.gallery1 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+/*  grid-template-rows: repeat(, 10vw);*/
+/*  grid-gap: 1rem; */
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+img.gallery__img:hover {
+    opacity:.5;
+}
+
+
